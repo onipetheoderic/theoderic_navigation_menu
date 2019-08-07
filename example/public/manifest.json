@@ -1,0 +1,8 @@
+{
+  "short_name": "theoderic_navigation_menu",
+  "name": "theoderic_navigation_menu",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
