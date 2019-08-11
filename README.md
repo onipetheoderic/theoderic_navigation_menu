@@ -1,6 +1,6 @@
 # theoderic_navigation_menu
 
-> responsive navigation menu 
+> A very responsive navigation menu with a flexible layout, can be used with react-router, and it has the flexibility of using unlimited menu items, you can also position the menu Items using the seperator_index, you should it it a valud of 2.3, you can add backrground, change text color, increase font-size, change google fonts, and lots more
 
 [![NPM](https://img.shields.io/npm/v/theoderic_navigation_menu.svg)](https://www.npmjs.com/package/theoderic_navigation_menu) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -8,6 +8,9 @@
 
 ```bash
 npm install --save theoderic_navigation_menu
+```
+```bash
+yarn add theoderic_navigation_menu
 ```
 
 ## Usage
