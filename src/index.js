@@ -52,12 +52,12 @@ handleOnClick =(condition) => {
     caps = true ? "uppercase" : "lowercase";
     const lists = Children.map(this.props.children, child => (
       
-      <li className="horizontal_menu_item" style={{fontFamily:this.props.googleFont, textTransform:caps, fontSize:this.props.fontSize, paddingTop:(this.props.logo_height/this.props.seperator_index), color: this.props.fontColor}}>{child}</li>
+      <li className={styles.horizontal_menu_item} style={{fontFamily:this.props.googleFont, textTransform:caps, fontSize:this.props.fontSize, marginTop:(this.props.logo_height/this.props.seperator_index), color: this.props.fontColor}}>{child}</li>
     ));
 
     const mLister = Children.map(this.props.children, child => (
       
-      <li className="innerDiv" style={{fontFamily:this.props.googleFont, textTransform:caps, fontSize:this.props.fontSize, color: 'white'}}>{child}</li>
+      <li className={styles.innerDiv} style={{fontFamily:this.props.googleFont, textTransform:caps, fontSize:this.props.fontSize, color: 'white'}}>{child}</li>
     ));
 
    
@@ -71,7 +71,7 @@ handleOnClick =(condition) => {
   </ul>
 </div>
 }
-<img className="logo_mobile" src={this.props.logo_link} style={{width:200, height: 50}}/>
+<img className={styles.logo_mobile} src={this.props.logo_link} style={{width:200, height: 50}}/>
 {this.state.normal &&
 <div class="container" onClick={()=>this.handleOnClick("on")}>
   <div class="bar1"></div>
@@ -88,7 +88,7 @@ handleOnClick =(condition) => {
 }
       <ul className="desktopView" style={{listStyleType: 'none', margin: 0, padding: 0, overflow: 'hidden'}}>
      
-        <img className="logo_menu_item" src={this.props.logo_link} style={{width:this.props.logo_width, height: this.props.logo_height}}/>{lists}
+        <img className={styles.logo_menu_item} src={this.props.logo_link} style={{width:this.props.logo_width, height: this.props.logo_height}}/>{lists}
       </ul>
       </div>
     )
