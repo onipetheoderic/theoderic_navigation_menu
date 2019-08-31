@@ -44,6 +44,9 @@ handleOnClick =(condition) => {
   }
 }
 
+toggleDropdown = () => {
+  this.setState({show:false, normal:true})
+}
 
 
 
@@ -64,29 +67,30 @@ handleOnClick =(condition) => {
 
     return (
       <div style={{backgroundColor:this.props.bgColor}}>
+
+<img className={styles.logo_mobile} src={this.props.logo_link} style={{width:200, height: 50}}/>
+{this.state.normal &&
+<div className={styles.container} onClick={()=>this.handleOnClick("on")}>
+  <div className={styles.bar1}></div>
+  <div className={styles.bar2}></div>
+  <div className={styles.bar3}></div>
+</div>
+}
+{!this.state.normal &&
+<div className={styles.container} onClick={()=>this.handleOnClick("off")}>
+  <div className={styles.bar1X}></div>
+  <div className={styles.bar2X}></div>
+  <div className={styles.bar3X}></div>
+</div>
+}
 {this.state.show &&
-<div class="mobile_menu_items">
+<div className={styles.mobile_menu_items} onClick={this.toggleDropdown}>
   <ul style={{listStyleType: 'none', padding:0}}>
    {mLister}
   </ul>
 </div>
 }
-<img className={styles.logo_mobile} src={this.props.logo_link} style={{width:200, height: 50}}/>
-{this.state.normal &&
-<div class="container" onClick={()=>this.handleOnClick("on")}>
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
-}
-{!this.state.normal &&
-<div class="container" onClick={()=>this.handleOnClick("off")}>
-  <div class="bar1X"></div>
-  <div class="bar2X"></div>
-  <div class="bar3X"></div>
-</div>
-}
-      <ul className="desktopView" style={{listStyleType: 'none', margin: 0, padding: 0, overflow: 'hidden'}}>
+      <ul className={styles.desktopView} style={{listStyleType: 'none', margin: 0, padding: 0, overflow: 'hidden'}}>
      
         <img className={styles.logo_menu_item} src={this.props.logo_link} style={{width:this.props.logo_width, height: this.props.logo_height}}/>{lists}
       </ul>

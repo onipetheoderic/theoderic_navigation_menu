@@ -72,9 +72,9 @@
   transition: 0.4s;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .desktopView {display: none;}
-  .container {display: block; float:right; padding-right:15px; padding-top:35px;}
+  .container {display: block; float:right; padding-right:15px; padding-top:35px; color: black}
   .logo_mobile {
     float: left;
     padding-top:30px;
